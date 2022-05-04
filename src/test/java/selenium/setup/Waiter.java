@@ -6,12 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public class Waiter {
 
-    private static final int TIMEOUT = 5;
-    private static final int POLLING = 100;
+    private static final Duration TIMEOUT = Duration.ofSeconds(5);
+    private static final Duration POLLING = Duration.ofSeconds(100);
 
     private final WebDriverWait wait;
 

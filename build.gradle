@@ -9,12 +9,12 @@
 
 plugins {
     // Apply the java plugin to add support for Java
-id "java"
+    id "java"
 
 // Apply the application plugin to add support for building an application
-id "application"
-id "idea"
-id "eclipse"
+    id "application"
+    id "idea"
+    id "eclipse"
 }
 
 sourceCompatibility = 1.11
@@ -37,7 +37,7 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.24'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
     // Use JUnit test framework
-    testImplementation (
+    testImplementation(
             'com.github.tomakehurst:wiremock-jre8:2.33.1',
             "junit:junit:${junitVersion}",
             "org.seleniumhq.selenium:selenium-java:${seleniumVersion}",
