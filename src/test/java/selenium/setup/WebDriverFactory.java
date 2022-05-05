@@ -20,6 +20,7 @@ public class WebDriverFactory {
 		chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--start-maximized");
         return new ChromeDriver(chromeOptions);
+//        return new ChromeDriver();
     };
 
     private static final Supplier<WebDriver> firefoxDriverSupplier = () -> {

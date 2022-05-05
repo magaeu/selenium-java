@@ -17,9 +17,13 @@ public class Waiter {
     private final WebDriverWait wait;
 
     public Waiter(WebDriver driver) {
-        this.wait = new WebDriverWait(driver, TIMEOUT, POLLING);
+        wait = new WebDriverWait(driver, TIMEOUT, POLLING);
     }
 
+    public boolean presenceOfElement(String elementId) {
+        return wait.until(
+                ExpectedConditions.presenceOfElementLocated(By.id(elementId))).isDisplayed();
+    }
 
     public WebElement untilIsVisible(WebElement element) {
         return wait.until(ExpectedConditions.visibilityOf(element));
