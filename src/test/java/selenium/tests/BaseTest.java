@@ -8,7 +8,7 @@ import selenium.setup.WebDriverFactory;
 
 public class BaseTest {
 
-    protected WebDriver driver;
+    WebDriver driver;
 
     @Before
     public void setup() {

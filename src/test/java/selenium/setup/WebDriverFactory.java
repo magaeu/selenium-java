@@ -16,10 +16,11 @@ public class WebDriverFactory {
 
     private static final Supplier<WebDriver> chromeDriverSupplier = () -> {
         WebDriverManager.chromedriver().setup();
-        ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("--start-maximized");
-        return new ChromeDriver(chromeOptions);
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//		chromeOptions.addArguments("--headless");
+//        chromeOptions.addArguments("--start-maximized");
+//        return new ChromeDriver(chromeOptions);
+        return new ChromeDriver();
     };
 
     private static final Supplier<WebDriver> firefoxDriverSupplier = () -> {
