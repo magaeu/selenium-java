@@ -1,6 +1,5 @@
 package selenium.pages;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +16,7 @@ public class LoginPage extends BasePage {
     }
 
     public void goToSauceLabsPage() {
-        driver.get(SAUCELABS_URL);
+        driver.navigate().to(SAUCELABS_URL);
         assertTrue(Messages.DEMO_PAGE_ERROR,
                 driver.getTitle().contains(PAGE_TITLE));
     }

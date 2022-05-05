@@ -10,15 +10,20 @@ public class LoginPageTests extends BaseTest {
 
     @Test
     public void openPageTest() {
-        LoginPage sauceLabsPage = new LoginPage(driver);
-        sauceLabsPage.goToSauceLabsPage();
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.goToSauceLabsPage();
     }
 
     @Test
     public void loginWithValidCredentials() {
-        LoginPage sauceLabsPage = new LoginPage(driver);
-        sauceLabsPage.goToSauceLabsPage();
-        sauceLabsPage.login("standard_user", "secret_sauce");
+        LoginPage loginPage = goToLoginPage();
+        loginPage.login("standard_user", "secret_sauce");
         assertTrue(new ProductsPage(driver).isLoaded());
+    }
+
+    private LoginPage goToLoginPage() {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.goToSauceLabsPage();
+        return loginPage;
     }
 }

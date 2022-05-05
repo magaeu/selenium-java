@@ -5,8 +5,8 @@ import selenium.setup.Waiter;
 
 public class BasePage {
 
-    public WebDriver driver;
-    public Waiter wait;
+    protected WebDriver driver;
+    protected Waiter wait;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
